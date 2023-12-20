@@ -10,6 +10,12 @@ Frontend:
 
 # STARTA PROJEKTET:
 Kör commandot ```npm i```
-Starta backend genom att skriva: cd backend och sedan ```node app.js```
-starta frontend genom att öppna login.html sidan.
+
+Starta backend:
+
+ - genom att skriva: ```cd backend``` och sedan ```node app.js```
+   
+Starta frontend:
+
+ - genom att öppna login.html sidan.
 
