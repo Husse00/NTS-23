@@ -1,0 +1,81 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="body">
+
+    <h1 class="docs">Skapa dokument</h1>
+
+    <form>
+
+        <label class="fontstyling">Dokument namn</label>
+        <br>
+        <input class="createInput" type="text" id="documentName" />
+
+        <br>
+        <br>
+
+        <label class="fontstyling">Beskrivning</label>
+        <br>
+        <input class="createInput" type="text" id="documentDescription" />
+
+        <br>
+        <br>
+        <br>
+
+        <button class="indexBackBtn" type="button" onclick="createDocument()">Skapa dokument</button>
+
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <button class="backBtn" onclick="index()">Tillbaka</button>
+
+</body>
+
+<script src="script.js"></script>
+<script>
+
+    // funktion för att skapa dokument
+    async function createDocument() {
+
+        let name = document.getElementById("documentName").value;
+        let description = document.getElementById("documentDescription").value;
+
+        let payload = {
+            name: name,
+            description: description
+        }
+
+        let response = await fetch(baseUrl + "/CreateDocument", {
+            method: "POST",
+            body: JSON.stringify(payload),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        let id = (await response.json()).id;
+
+        if (response.ok) {
+            window.open("edit.html?id=" + id, "_self");
+        }
+        else {
+            alert("Create document failed");
+        }
+    }
+
+    // Öppna index
+    function index() {
+        window.open("index.html", '_self');
+    }
+
+</script>
+
+</html>

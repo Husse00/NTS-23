@@ -1,0 +1,250 @@
+.login-form {
+  background-color: rgb(105, 199, 182);
+  width: 30em;
+  padding: 2em;
+  height: 20em;
+  color: rgb(255, 255, 255);
+  margin-top: 3em;
+  border-radius: 15px;
+}
+.signIn-P {
+  position: relative;
+  left: 6.5em;
+  bottom: 1.4em;
+  margin-bottom: -0.5em;
+  font-size: 23px;
+}
+.email-form {
+  margin-left: 1.4em;
+}
+.input {
+  margin-left: 0.8em;
+  left: 2em;
+  padding: 1.3em;
+  background-color: rgb(236, 235, 234);
+}
+.signIn-btn {
+  position: relative;
+  left: 8.4em;
+  top: 1.4em;
+}
+.form {
+  position: relative;
+  left: 4.3em;
+}
+.body {
+  background-color: rgb(249, 249, 248);
+  margin-left: 2em;
+}
+.docs{
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 2em;
+  padding-top: 0.5em;
+}
+
+.indexBackBtn {
+  background-color: initial;
+  background-image: linear-gradient(-180deg, #00d775, #00bd68);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  height: 44px;
+  line-height: 44px;
+  outline: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 10%;
+  z-index: 9;
+  border: 0;
+  margin-bottom: -5em;
+}
+
+.indexBackBtn:hover {
+  background: #00bd68;
+}
+
+.addDocBtn {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  padding: 3em;
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.addDocBtn:hover,
+.addDocBtn:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.addDocBtn:hover {
+  transform: translateY(-1px);
+}
+
+.addDocBtn:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+.DocName{
+
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 25px;
+}
+.fontstyling {
+  font-family: montserrat;
+  font-weight: bold;
+  font-size: 25px;
+}
+.createInput{
+  padding: 1em;
+  margin: 0.5em;
+  margin-right: 0.2em;
+}
+
+
+
+/* CSS */
+.backBtn {
+
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 7em;
+}
+
+.backBtn:disabled {
+  cursor: default;
+}
+.backBtn2 {
+
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #3ec099;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 7em;
+}
+
+.backBtn2:disabled {
+  cursor: default;
+}
+
+  .signIn-P{
+      position: relative;
+      left: 6.5em;
+      bottom: 1.4em;
+      margin-bottom: -0.5em;
+      font-size: 23px;
+     
+  }
+  .email-form {
+    margin-left: 1.4em;
+  }
+  .input {
+    margin-left: 0.8em;
+    left: 2em;
+    padding: 1.3em;
+    background-color: rgb(236, 235, 234);
+  }
+  .signIn-btn {
+    position: relative;
+    left: 8.4em;
+    top: 1.4em;
+  }
+  .form{
+      position: relative;
+      left: 4.3em;
+  }
+  
+  .signup-form {
+    background-color: rgb(81, 127, 197);
+    width: 30em;
+    padding: 2em;
+    height: 20em;
+    color: rgb(255, 255, 255);
+    margin-top: 3em;
+    border-radius: 15px;
+  }

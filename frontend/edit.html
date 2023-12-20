@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="docs">Redigera dokument</h1>
+
+    <textarea id="textContent"></textarea>
+    <br />
+    <button class="indexBackBtn" id="saveBtn" onclick="saveDocument()">
+      Spara
+    </button>
+
+    <div id="textResult"></div>
+
+    <br />
+    <br />
+
+    <button class="backBtn" onclick="index()">Tillbaka</button>
+
+    <script src="/node_modules/tinymce/tinymce.min.js"></script>
+    <script src="script.js"></script>
+    <script src="wysiwyg.js"></script>
+  </body>
+
+  <script>
+    // hämta id från query parameter
+    const params = new URLSearchParams(window.location.search);
+    var id = params.get("id");
+
+    // när sidan laddas så hämtasr vi dokumentet från databasen
+    window.onload = async (event) => {
+      let response = await fetch(baseUrl + "/GetDocument/" + id);
+
+      let data = await response.json();
+      let documentText = data.document.data;
+
+      if (documentText != null) {
+        var editor = tinymce.get("textContent");
+        editor.setContent(documentText);
+      }
+    };
+
+    // funktion för att spara dokument igenom att kalla på API
+    async function saveDocument() {
+      let documentText = document.getElementById("textContent").value;
+
+      let payload = {
+        document: documentText,
+      };
+
+      let response = await fetch(baseUrl + "/UpdateDocument/" + id, {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (!response.ok) {
+        alert("Fel vid sparning av dokument");
+      } else {
+        alert("Document Updated!");
+      }
+    }
+
+    // Öppna index
+    function index() {
+      window.open("index.html", "_self");
+    }
+  </script>
+</html>

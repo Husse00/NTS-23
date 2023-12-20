@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="body">
+    <h1 class="fontstyling">Dokument information</h1>
+
+    <br />
+  
+
+    <h4 class="fontstyling">Namn</h4>
+    <p id="name"></p>
+
+    <h4 class="fontstyling">Beskrivning</h4>
+    <p id="description"></p>
+
+    <h4 class="fontstyling">Dokument</h4>
+    <div id="document"></div>
+
+    <br />
+    <br />
+
+    <button class="backBtn" onclick="index()">Tillbaka</button>
+  </body>
+
+  <script src="script.js"></script>
+  <script>
+    // hämta id från query parameter
+    const params = new URLSearchParams(window.location.search);
+    var id = params.get("id");
+
+    // Öppna index
+    function index() {
+      window.open("index.html", "_self");
+    }
+
+    // när sidan laddas så hämtas dokumentet från API:et
+    window.onload = async (event) => {
+      let response = await fetch(baseUrl + "/GetDocument/" + id);
+      let data = await response.json();
+
+      document.getElementById("name").textContent = data.document.name;
+      document.getElementById("description").textContent = data.document.description;
+      document.getElementById("document").innerHTML = data.document.data;
+    };
+  </script>
+</html>
