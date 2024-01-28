@@ -6,10 +6,6 @@ const db = require("./db");
 const app = express();
 const PORT = 3000;
 
-// lösenord för admin
-const adminPassword = "admin";
-
-
 app.use(express.json());
 
 app.use(cors());
