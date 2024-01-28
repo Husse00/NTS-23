@@ -17,5 +17,5 @@ Starta backend:
    
 Starta frontend:
 
- - genom att öppna login.html sidan.
+ - genom att öppna login.html sidan i mappen 'frontend'.
 
