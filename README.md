@@ -3,7 +3,7 @@
 # Hur man konfiguerar:
 Backend:
 - kör sql skriptet från filen NTS_SQL_Insert.sql som ligger i backend mappen, detta skapar upp en databas som heter 'nts' i MySql med lite data i. 
-- I filen 'db.js' så finns användarnamn och lösenord för att konnekta till MySql , detta lär du behöva ändra till ditt eget. 
+- I filen 'db.js' så finns användarnamn och lösenord för att konnekta till MySql , detta lär du behöva ändra till ditt egna på rad 7 och 8 i filen (db.js). 
 
 Frontend: 
 - i filen script.js så finns det en URL för apiet som är localhost med port 3000, ändra om det behövs.
